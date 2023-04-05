@@ -1,0 +1,27 @@
+{
+  "name": "waka-groups",
+  "version": "1.0.0",
+  "description": "The Application is to build a simple inventory system with CRUD operations, where to create store items, retrieve store item, update store items, and delete store items using PostgreSQL as database\r # Here are the steps you can follow, using PostgreSQL as database. \r 1)  Create a new directory for your project on your local machine\r 2)  Navigate to the project directory using the command line interface.\r 3)  Initialize a new Node.js project by running the command npm init.\r 4)  Install the necessary dependencies for your project using the command npm install express pg.\r 5)  Create a new file named index.js in the root directory of your project. This file will be the entry point of your application.\r 6)  Inside index.js, import the necessary modules for your project using the following code:\r 7)  Set up a connection to your PostgreSQL database using the pg module.\r 8)  Create the necessary routes for your CRUD operations using Express for item.\r 9)  Test your routes using a tool like Postman to make sure they work as expected.\r 10) Commit and push your changes to the remote repository on GitHub using the command line interface.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FAMAKINWARIS/Waka-Groups.git"
+  },
+  "author": "wakaGroup",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FAMAKINWARIS/Waka-Groups/issues"
+  },
+  "homepage": "https://github.com/FAMAKINWARIS/Waka-Groups#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "nodemon": "^2.0.22",
+    "pg": "^8.10.0"
+  }
+}
