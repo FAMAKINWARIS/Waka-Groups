@@ -1,12 +1,18 @@
 const { pool } = require("../config/db");
 
-// execute a SQL query to create a new table
-pool.query(`
-  CREATE TABLE IF NOT EXISTS inventory_record (
-    id SERIAL PRIMARY KEY,
-    item_name VARCHAR(50),
-    item_description VARCHAR,
-    item_category VARCHAR,
-    item_amount INTEGER
-  )
-`);
+exports.createInventoryRecord = async (
+  name, 
+  description,
+   category, 
+   amount
+   ) => {
+  try {
+    const result = await pool.query(
+      "INSERT INTO inventory_record (item_name, item_description, item_category, item_amount) VALUES ($1, $2, $3, $4) RETURNING *",
+      [name, description, category, amount]
+    );
+    return result.rows[0];
+  } catch (error) {
+    console.error("Error creating inventory record: ", error);
+  }
+};
