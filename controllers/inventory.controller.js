@@ -58,3 +58,19 @@ exports.updateInventory = async (req, res) => {
     });
   }
 };
+
+
+// delete inventory
+exports.deleteInventory = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deleteInventory = await pool.query(
+      "DELETE FROM inventory_record WHERE id = $1",
+      [id]
+    );
+    return res.status(200).json({ message: "Inventory deleted successfully" });
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({ error: error.message });
+  }
+}
